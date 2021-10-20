@@ -1,0 +1,17 @@
+[package]
+edition = "2021"
+name = "image-downloader"
+version = "0.1.0"
+
+[dependencies]
+tokio = {version = "1", features = ["macros", "rt-multi-thread", "time", "sync"]}
+
+clap = "3.0.0-beta.5"
+regex = "1"
+reqwest = "0.11"
+sha1 = {version = "0.6", features = ["std"]}
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.2"
+bytes = "1"
+glob = "0.3"
