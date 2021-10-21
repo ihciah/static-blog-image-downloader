@@ -15,3 +15,10 @@ sha1 = {version = "0.6", features = ["std"]}
 thiserror = "1.0"
 tracing = "0.1"
 tracing-subscriber = "0.2"
+
+[profile.release]
+lto = true
+opt-level = "s"
+overflow-checks = false
+panic = "abort"
+codegen-units = 1
