@@ -16,7 +16,7 @@ impl Default for RegexWrapper {
 
 impl RegexWrapper {
     pub fn new() -> Self {
-        let regex = Regex::new(r"!\[.*?\]\((http.*?)\)").unwrap();
+        let regex = Regex::new(r"!\[.*?\]\((http[^\s)]*)\s*.*?\)").unwrap();
         Self { regex }
     }
 
